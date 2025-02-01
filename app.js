@@ -92,8 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
         sendMessage();
     });
     
+    messageInput.addEventListener('input', () => {
+        if (messageInput.value.trim()) {
+            sendButton.disabled = false;
+        } else {
+            sendButton.disabled = true;
+        }
+    });
+
     messageInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && !e.metaKey && !e.ctrlKey) {
             e.preventDefault();
             sendMessage();
         }
