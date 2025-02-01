@@ -236,14 +236,25 @@ footer {
     }
     
     #chatbox {
-        height: 80vh;
+        height: 80vh; /* Adjust height for mobile */
+        padding: 1rem; /* Add padding for mobile */
     }
-    
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
+
     .message {
-        max-width: 90%;
+        max-width: 90%; /* Ensure messages take up more space */
+    }
+
+    .input-container {
+        flex-direction: column; /* Stack input and button */
+        align-items: stretch;
+    }
+
+    input {
+        width: 100%; /* Full width for input */
+        margin-bottom: 0.5rem; /* Space between input and button */
+    }
+
+    button {
+        width: 100%; /* Full width for button */
     }
 }
